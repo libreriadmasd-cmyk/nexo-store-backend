@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  font-family: "Poppins", system-ui, sans-serif;
+  --background: 210 28% 98%;
+  --foreground: 216 18% 12%;
+  --card: 0 0% 100%;
+  --card-foreground: 211 18% 12%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 211 18% 12%;
+  --border: 214 11% 84%;
+  --input: 210 20% 96%;
+  --ring: 186 100% 36%;
+  --primary: 186 100% 36%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 205 89% 33%;
+  --secondary-foreground: 0 0% 100%;
+  --accent: 175 65% 44%;
+  --accent-foreground: 0 0% 100%;
+  --muted: 210 46% 94%;
+  --muted-foreground: 216 18% 28%;
+  --destructive: 359 86% 64%;
+  --destructive-foreground: 0 0% 100%;
+  --radius: 1rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: radial-gradient(circle at top left, rgba(46, 196, 182, 0.16), transparent 28%),
+    linear-gradient(180deg, hsl(var(--background)) 0%, #f8fafc 100%);
+  color: hsl(var(--foreground));
+  font-family: "Poppins", system-ui, sans-serif;
+}
+
+body, button, input, textarea, select {
+  font: inherit;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(46, 196, 182, 0.25);
+  color: hsl(var(--foreground));
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+p, li, label, button, input, textarea {
+  font-weight: 500;
+}
+
+button, input, textarea, select {
+  border-radius: 0.75rem;
+}
+
+input, textarea {
+  background: hsl(var(--input));
+  border: 1px solid hsl(var(--border));
+}
+
+button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+  outline: 2px solid rgba(46, 196, 182, 0.75);
+  outline-offset: 2px;
+}
+
+.card-glass {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(18px);
+}
+
+.text-brand-blue {
+  color: #1e3a5f;
+}
+
+.bg-brand-blue {
+  background-color: #1e3a5f;
+}
+
+.text-brand-teal {
+  color: #2ec4b6;
+}
+
+.bg-brand-tealDark {
+  background-color: #26A599;
+}
+
+.bg-brand-blueDark {
+  background-color: #152841;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-full bg-brand-blue px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-slate-900/5 transition hover:bg-brand-blueDark;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center rounded-full border border-brand-blue bg-white/90 px-5 py-3 text-sm font-semibold text-brand-blue transition hover:bg-brand-blue/10;
+}
+
+
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-full bg-brand-blue px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-slate-900/5 transition hover:bg-brand-blue-dark;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center rounded-full border border-brand-blue bg-white/90 px-5 py-3 text-sm font-semibold text-brand-blue transition hover:bg-brand-blue/10;
+}

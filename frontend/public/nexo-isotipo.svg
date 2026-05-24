@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <!-- Isotipo Nexo Store: letra X con swoosh -->
+  <!-- X principal en azul oscuro -->
+  <path d="M48 56 L88 100 L48 144 L62 158 L100 116 L138 158 L152 144 L112 100 L152 56 L138 42 L100 84 L62 42 Z"
+        fill="#1E3A5F" stroke="none"/>
+  <!-- Swoosh teal arqueado abrazando la X -->
+  <path d="M30 100 Q 30 30, 100 30 Q 170 30, 170 100"
+        stroke="#2EC4B6" stroke-width="14" stroke-linecap="round" fill="none"/>
+  <!-- Punto coral acento -->
+  <circle cx="170" cy="100" r="9" fill="#FF6B6B"/>
+</svg>
