@@ -1,0 +1,144 @@
+{
+  "theme": "light",
+  "archetype": "Archetype 6 (Vibrant Play) blended with Archetype 3 (Pastel & Soft)",
+  "brand_name": "Nexo Store",
+  "language": "es",
+  "currency": "ARS",
+  "typography": {
+    "heading_font": "Outfit",
+    "body_font": "DM Sans",
+    "strategy": "Modern, energetic, and clean. 'Outfit' provides a geometric, friendly yet professional voice for headings, avoiding the overused Inter/Roboto. 'DM Sans' offers excellent readability for product names, pricing, and descriptions. Headings should be tracking-tight.",
+    "sizes": {
+      "h1": "text-4xl sm:text-5xl font-bold tracking-tight",
+      "h2": "text-2xl sm:text-3xl font-bold tracking-tight",
+      "h3": "text-xl font-semibold",
+      "body": "text-base",
+      "small": "text-sm text-gray-500",
+      "price": "text-xl font-bold text-gray-900"
+    }
+  },
+  "colors": {
+    "background": "#F9FAFB",
+    "surface": "#FFFFFF",
+    "primary": "#2563EB",
+    "primary_hover": "#1D4ED8",
+    "accent_yellow": "#FACC15",
+    "accent_green": "#22C55E",
+    "text_main": "#111827",
+    "text_muted": "#4B5563",
+    "border": "#E5E7EB",
+    "category_tags": {
+      "Escolar": "bg-blue-100 text-blue-800",
+      "Oficina": "bg-green-100 text-green-800",
+      "Juguetería": "bg-yellow-100 text-yellow-800",
+      "Marroquinería": "bg-purple-100 text-purple-800"
+    }
+  },
+  "layout_and_spacing": {
+    "strategy": "Generous spacing, clean lines, and soft radii to feel youthful yet highly functional. Use an asymmetric bento or strict grid depending on the section.",
+    "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    "main_grid": "grid grid-cols-1 md:grid-cols-4 gap-8 pt-8 pb-16",
+    "sidebar": "md:col-span-1 space-y-8 sticky top-24 h-fit",
+    "product_grid": "md:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6",
+    "card_padding": "p-4",
+    "border_radius": "rounded-2xl"
+  },
+  "surface_strategies": {
+    "header": "Crystal Glassmorphism: backdrop-blur-xl bg-white/80 border-b border-gray-200 sticky top-0 z-50 transition-all",
+    "product_card": "Solid white surface (#FFFFFF) with a delicate 1px border (border-gray-200). On hover: translate-y-[-4px], subtle shadow-xl, border color darkens slightly. Inner image container should have rounded-xl and gray-100 background to ensure product pops.",
+    "sidebar_container": "Transparent background with logical grouping. No heavy boxing to keep the UI light."
+  },
+  "components": {
+    "navigation_bar": {
+      "elements": ["Brand Logo/Name", "Search Input", "Cart Button with Counter Badge"],
+      "test_ids": ["nav-brand", "nav-search-input", "nav-cart-button", "nav-cart-counter"],
+      "rules": "Must be visible on desktop. Search bar should be prominent and centered. Cart icon must feature a visible, brightly colored counter badge (e.g., yellow or red) that updates dynamically."
+    },
+    "sidebar_filters": {
+      "elements": ["Category Checkboxes/Pills", "Price Range (optional)", "Clear Filters Button"],
+      "test_ids": ["filter-category-checkbox", "filter-clear-button"],
+      "categories": ["Escolar", "Oficina", "Juguetería", "Marroquinería"],
+      "rules": "Use Shadcn Checkbox or Toggle Group. Labels must be text-sm font-medium text-gray-700. Provide clear 'active' states for selected filters."
+    },
+    "product_card": {
+      "elements": ["Image", "Category Badge", "Product Name", "Price (ARS)", "Add to Cart Button"],
+      "test_ids": ["product-card", "product-image", "product-category", "product-name", "product-price", "add-to-cart-button"],
+      "rules": "Image aspect ratio 1:1, object-cover or object-contain with light gray background. Category badge small and uppercase (text-xs tracking-wider). Price formatted as $ XXX.XX. Add to cart button uses primary color, spans full width or sits at bottom right, must have a clear hover state."
+    },
+    "product_detail_page": {
+      "elements": ["Large Image Gallery", "Breadcrumbs", "Product Name", "SKU", "Price", "Description", "Add to Cart Main Button"],
+      "test_ids": ["pdp-image", "pdp-title", "pdp-price", "pdp-add-to-cart"],
+      "rules": "Should be a distinct view (route or large modal). Split layout: Image left (col-span-1 md:col-span-2), Details right (col-span-1 md:col-span-1). Use generous leading for description text."
+    }
+  },
+  "motion_and_interactions": {
+    "hover": "Buttons and links must have explicit hover states (e.g., hover:bg-blue-700). Cards should lift slightly (-translate-y-1) and gain shadow.",
+    "click": "Active states on buttons (scale down slightly or change color).",
+    "cart_update": "When 'Añadir al carrito' is clicked, trigger a small pulse animation on the cart counter badge and optionally show a Sonner toast notification."
+  },
+  "icons_and_assets": {
+    "library": "lucide-react",
+    "sizing": "w-5 h-5 for standard icons, w-6 h-6 for header icons",
+    "recommended_icons": ["ShoppingCart", "Search", "Filter", "ChevronRight", "Check", "Plus"]
+  },
+  "media": {
+    "escolar": [
+      {
+        "url": "https://images.pexels.com/photos/5088009/pexels-photo-5088009.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Assorted stationery items (scissors, pencils, clips)",
+        "test_id": "product-image-escolar-1"
+      },
+      {
+        "url": "https://images.pexels.com/photos/5088015/pexels-photo-5088015.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Yellow stationery tools flat lay",
+        "test_id": "product-image-escolar-2"
+      }
+    ],
+    "marroquineria": [
+      {
+        "url": "https://images.pexels.com/photos/4887256/pexels-photo-4887256.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Purple kids backpack with plush toys",
+        "test_id": "product-image-marroquineria-1"
+      },
+      {
+        "url": "https://images.pexels.com/photos/37098586/pexels-photo-37098586.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Children with backpacks",
+        "test_id": "product-image-marroquineria-2"
+      }
+    ],
+    "jugueteria": [
+      {
+        "url": "https://images.pexels.com/photos/8923958/pexels-photo-8923958.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Colorful wooden educational toys on shelf",
+        "test_id": "product-image-jugueteria-1"
+      },
+      {
+        "url": "https://images.pexels.com/photos/8923982/pexels-photo-8923982.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Educational wooden toys on table",
+        "test_id": "product-image-jugueteria-2"
+      }
+    ],
+    "oficina": [
+      {
+        "url": "https://images.pexels.com/photos/6340712/pexels-photo-6340712.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Top view of office desk with stationery",
+        "test_id": "product-image-oficina-1"
+      },
+      {
+        "url": "https://images.pexels.com/photos/7888645/pexels-photo-7888645.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Pens, markers, and sticky notes on desk",
+        "test_id": "product-image-oficina-2"
+      }
+    ]
+  },
+  "instructions_to_main_agent": [
+    "Install and use 'lucide-react' for all icons.",
+    "Apply 'Outfit' font for all headings (H1-H4) and 'DM Sans' for body text. Add these to Tailwind config.",
+    "Implement a layout with a fixed/sticky header (backdrop-blur-xl bg-white/80), a left sidebar for filters, and a main product grid.",
+    "Currency must be formatted in ARS ($ XXX.XX). Ensure locale strings are in Spanish.",
+    "Add 'data-testid' to all interactive elements as defined in the components section.",
+    "Use the provided media URLs to populate the initial product catalog dynamically.",
+    "Ensure the 'Añadir al carrito' button has clear interactive states and updates the cart counter in the header.",
+    "Avoid any brown, wood, or vintage library colors. Strictly stick to the defined vibrant palette (Blue, Yellow, Green, White, Light Gray)."
+  ]
+}
